@@ -131,8 +131,11 @@
 				$('.temp').click(function(){
 					$('.temp-list').find('.txt-wrapper').removeClass('active');
 					$(this).find('.txt-wrapper').addClass('active');
-					var question = $(this).find('.txt').text();
-					$('.ask-txt').find('textarea').val(question)/*.focus()*/;
+					var question = $(this).find('.txt').text(),
+						textarea = $('.ask-cnt').find('textarea');
+						wrapper = textarea.parent('.textarea-wrapper');
+					wrapper.css('border-color', '#4cbec1');
+					textarea.val(question)/*.focus()*/;
 
 					/*var moveCaretToEnd = function(el) {
 					    if (typeof el.selectionStart == "number") {
