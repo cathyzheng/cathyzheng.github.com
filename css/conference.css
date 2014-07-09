@@ -144,10 +144,10 @@ body{
     display: box; 
 }
 .ask .q{
-	display: inline-block;
+	display: block;
 }
 .ask .txt, .answer .txt{
-	display: inline-block;
+	display: block;
 	-webkit-box-flex: 1;
 	-moz-box-flex: 1;
 	box-flex: 1;
