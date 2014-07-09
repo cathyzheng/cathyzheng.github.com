@@ -129,8 +129,6 @@
 
 				//从问题模版中选择一个问题
 				$('.temp').click(function(){
-					$('.temp-list').find('.ico-yes').hide();
-					$(this).find('.ico-yes').show();
 					$('.temp-list').find('.txt-wrapper').removeClass('active');
 					$(this).find('.txt-wrapper').addClass('active');
 					var question = $(this).find('.txt').text();
