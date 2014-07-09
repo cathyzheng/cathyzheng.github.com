@@ -129,13 +129,31 @@
 
 				//从问题模版中选择一个问题
 				$('.temp').click(function(){
-					$('.ico-yes').hide();
+					$('.temp-list').find('.ico-yes').hide();
 					$(this).find('.ico-yes').show();
+					$('.temp-list').find('.txt-wrapper').removeClass('active');
+					$(this).find('.txt-wrapper').addClass('active');
 					var question = $(this).find('.txt').text();
 					$('.ask-txt').find('textarea').val(question).focus();
 
+					var moveCaretToEnd = function(el) {
+					    if (typeof el.selectionStart == "number") {
+					        el.selectionStart = el.selectionEnd = el.value.length;
+					    } else if (typeof el.createTextRange != "undefined") {
+					        el.focus();
+					        var range = el.createTextRange();
+					        range.collapse(false);
+					        range.select();
+					    }
+					};
+
+					setTimeout(function(){
+						moveCaretToEnd($('.ask-txt').find('textarea')[0]);
+					}, 1);
 				});
 
+				//
+				
 				//提问
 				$('.btn-ask-sure').click(function(){
 					var textarea = $('.ask-cnt').find('textarea'),
