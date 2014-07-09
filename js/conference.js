@@ -134,9 +134,9 @@
 					$('.temp-list').find('.txt-wrapper').removeClass('active');
 					$(this).find('.txt-wrapper').addClass('active');
 					var question = $(this).find('.txt').text();
-					$('.ask-txt').find('textarea').val(question).focus();
+					$('.ask-txt').find('textarea').val(question)/*.focus()*/;
 
-					var moveCaretToEnd = function(el) {
+					/*var moveCaretToEnd = function(el) {
 					    if (typeof el.selectionStart == "number") {
 					        el.selectionStart = el.selectionEnd = el.value.length;
 					    } else if (typeof el.createTextRange != "undefined") {
@@ -149,7 +149,7 @@
 
 					setTimeout(function(){
 						moveCaretToEnd($('.ask-txt').find('textarea')[0]);
-					}, 1);
+					}, 1);*/
 				});
 
 				//
@@ -207,6 +207,9 @@
 					var wrapper = $(this).parents('.textarea-wrapper');
 					wrapper.css('border-color', '#4cbec1');
 
+				}).live('blur', function(){
+					var wrapper = $(this).parents('.textarea-wrapper');
+					wrapper.css('border-color', '#dfdfdf');
 				});
 
 				//分享到朋友圈
