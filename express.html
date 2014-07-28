@@ -26,7 +26,7 @@
 		</li>
 	</ul>
 </section>
-<section class="express active">
+<section class="express" id="express">
 	<div class="header">朋友匿名向你提问</div>
 	<div class="bg"></div>
 	<div class="bd">
@@ -41,6 +41,10 @@
 </section>
 <script type="'text/javascript'">
 	(function(){
+		var express = document.getElementById('express'),
+			expressClass = express.className;
+		express.className = expressClass + ' active';
+
 		var eDownload = document.getElementById('e-btn-download'),
 			ua = navigator.userAgent,
 			isApprovedByApple = 0;          //是否已上架到app store
