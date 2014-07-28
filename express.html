@@ -32,7 +32,7 @@
 	<div class="bd">
 		<p class="e-txt">想知道是谁向你匿名表白吗?<br/>点击下载【叽叽APP】</p>
 		<div class="e-download">
-			<div class="logo-img"></div>
+			<div class="logo-img" id="logo-img"></div>
 			<a href="javascript:;" class="e-btn-download" id="e-btn-download">立即下载</a>
 			<div class="logo-txt"></div>
 		</div>
@@ -41,9 +41,12 @@
 </section>
 <script type="text/javascript">
 	(function(){
-		var express = document.getElementById('express'),
+		/*var express = document.getElementById('express'),
 			expressClass = express.className;
-		express.className = expressClass + ' active';
+		express.className = expressClass + ' active';*/
+
+		var logoImg = document.getElementById('logo-img');
+		logoImg.style.webkitTransform = 'translate(0, -16px) translateZ(0px)';
 
 		var eDownload = document.getElementById('e-btn-download'),
 			ua = navigator.userAgent,

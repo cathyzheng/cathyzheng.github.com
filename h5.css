@@ -138,8 +138,8 @@ html,body{font-size:13.33px;}
 	transition:all 1s ease-in 1s;
 }
 .express.active .logo-img{
-	-webkit-transform:translate(0, -16px);
-	transform:translate(0, -16px);
+	-webkit-transform:translate(0, -16px) translateZ(0px);
+	transform:translate(0, -16px) translateZ(0px);
 }
 .express .e-btn-download{
 	display: block;
