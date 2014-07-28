@@ -1,5 +1,5 @@
 var heart = document.querySelector('#heart'),
-	marginLeft = window.getComputedStyle(heart).marginLeft.replace('px', '');
+	marginLeft = + window.getComputedStyle(heart).marginLeft.replace('px', '');
 
 function Orientation(selector) {}
 
@@ -32,8 +32,17 @@ Orientation.prototype.orientationListener = function(evt) {
 		alpha = event.accelerationIncludingGravity.z*10;
 	}
 
+	gamma = parseInt(gamma);
+	beta = parseInt(beta);
+
+	/*console.log(this._lastGamma);
+	console.log(gamma);
+	console.log(this._lastBeta);
+	console.log(beta);*/
+
 	if (this._lastGamma != gamma || this._lastBeta != beta) {
-      	document.querySelector('#heart').style.marginLeft = marginLeft + gamma/90 + 200 + 'px';
+		console.log(marginLeft + gamma/90);
+      	document.querySelector('#heart').style.marginLeft = marginLeft + gamma/90 + 10 + 'px';
 		this._lastGamma = gamma;
     	this._lastBeta = beta;
     }
