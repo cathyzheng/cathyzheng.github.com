@@ -39,41 +39,41 @@
 	</div>
 	<div class="heart"></div>
 </section>
-<script type="'text/javascript'">
+<script type="text/javascript">
 	(function(){
-		//setTimeout(function(){
-			/*console.log(111);
-			var express = document.getElementById('express'),
-				expressClass = express.className;
-			express.className = expressClass + ' active';*/
-		//}, 500);
+		var express = document.getElementById('express'),
+			expressClass = express.className;
+		express.className = expressClass + ' active';
 
 		var eDownload = document.getElementById('e-btn-download'),
 			ua = navigator.userAgent,
+			isIos = /iphone|ipod|ipad/i.test(ua),
+			isAndroid = /android/i.test(ua),
 			isApprovedByApple = 0;          //是否已上架到app store
 
-		if(/iphone|ipod|ipad/i.test(ua)) {  //ios
-			if(isApprovedByApple){
-				eDownload.setAttribute('href', '');
-			}else{
-				alert('“叽叽ios客户端正在路上，敬请期待');
-			}
+		if(isIos && isApprovedByApple) {  //ios
+			eDownload.setAttribute('href', '');
 		}else if(/android/i.test(ua)) {     //android
 			eDownload.setAttribute('href', 'http://static.jiji.ly/apk/jiji.apk');
 		}
 
 		eDownload.addEventListener('click', function(){
-			alert(eDownload.getAttribute('href'));
+			if(isIos && !isApprovedByApple){
+				alert('叽叽ios客户端正在路上，敬请期待');
+			}else{
+				alert(eDownload.getAttribute('href'));
+			}
+			
 		});
 	})();
 </script>
-<script type="text/javascript" src="http://www.jiji.ly/static/js/devicemotion.js"></script>
+<!-- <script type="text/javascript" src="http://www.jiji.ly/static/js/devicemotion.js"></script>
 
 <div style="display:none;">
 	<script type="text/javascript">
 	var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 	document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Faa23f2547210a644342486c0b584743a' type='text/javascript'%3E%3C/script%3E"));
 	</script>
-</div>
+</div> -->
 </body>
 </html>
