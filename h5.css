@@ -131,11 +131,11 @@ html,body{font-size:13.33px;}
 	width: 5.21rem;
 	height: 4.49rem;
 	margin: 0 auto;
-	background: url('/images/jiji.png');
+	background: url('../images/jiji.png');
 	background-size: 5.21rem auto;
 	position: relative;
 	-webkit-transition:all 1s ease-in;
-	-webkit-transform:translate(0, -14px)
+	-webkit-transform:translate(0, -14px);
 	overflow: hidden;
 }
 .express .e-btn-download{
@@ -153,14 +153,14 @@ html,body{font-size:13.33px;}
 	display: block;
 	width: 8.61rem;
 	height: 0.93rem;
-	background:url('/images/txt.png');
+	background:url('../images/txt.png');
 	background-size: 8.61rem auto;
 	margin: 1rem auto 0;
 }
 .express .heart{
 	width:17.36rem;
 	height:5.21rem;
-	background:url('/images/heart.png');
+	background:url('../images/heart.png');
 	background-size: 17.36rem auto;
 	position: absolute;
 	bottom: 0;
