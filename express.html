@@ -61,6 +61,10 @@
 		}else if(/android/i.test(ua)) {     //android
 			eDownload.setAttribute('href', 'http://static.jiji.ly/apk/jiji.apk');
 		}
+
+		eDownload.addEventListener('click', function(){
+			alert(eDownload.getAttribute('href'));
+		});
 	})();
 </script>
 <script type="text/javascript" src="http://www.jiji.ly/static/js/devicemotion.js"></script>
