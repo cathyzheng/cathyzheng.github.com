@@ -45,8 +45,10 @@
 			expressClass = express.className;
 		express.className = expressClass + ' active';*/
 
-		var logoImg = document.getElementById('logo-img');
-		logoImg.style.webkitTransform = 'translate(0, -16px) translateZ(0px)';
+		setTimeout(function(){
+			var logoImg = document.getElementById('logo-img');
+			logoImg.style.webkitTransform = 'translate(0, -16px) translateZ(0px)';
+		}, 500) 
 
 		var eDownload = document.getElementById('e-btn-download'),
 			ua = navigator.userAgent,
