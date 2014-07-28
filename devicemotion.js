@@ -42,13 +42,16 @@ Orientation.prototype.orientationListener = function(evt) {
 	beta = parseInt(beta);
 
 	if (this._lastGamma != gamma || this._lastBeta != beta) {
-        var rFontSize = window.getComputedStyle(document.querySelector('body')).fontSize.replace('px', 0),
-        	style = document.getElementById("heart").style,
-        	marginLeft = +style.marginLeft.replace('rem', '') * rFontSize,
+        var rFontSize = window.getComputedStyle(document.querySelector('body')).fontSize.replace('px', ''),
+        	marginLeft = window.getComputedStyle(document.querySelector('#heart')).marginLeft.replace('px', ''),
         	delta =  gamma/90;
 
+        console.log(rFontSize);
+        console.log(marginLeft);
+        console.log(delta);
+
         //style.marginLeft = gamma/90 * 200 + 200 +"px";
-        style.marginLeft = marginLeft + delta + 'px';
+        document.querySelector('#heart').style.marginLeft = marginLeft + delta + 'px';
 
         this._lastGamma = gamma;
         this._lastBeta = beta;
