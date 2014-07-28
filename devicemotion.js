@@ -24,8 +24,8 @@ Orientation.prototype.orientationListener = function(evt) {
 		evt.alpha = (evt.z * (180 / Math.PI)); //转换成角度值
 	}
 	/* beta:   -180..180 (rotation around x axis) */
-	/* gamma:  -90..90  (rotation around y axis) */
-	/* alpha:  0..360 (rotation around z axis) (-180..180) */
+	/* gamma:  -90..90   (rotation around y axis) */
+	/* alpha:  0..360    (rotation around z axis) (-180..180) */
 
 	var gamma = evt.gamma
 	var beta  = evt.beta
@@ -38,24 +38,18 @@ Orientation.prototype.orientationListener = function(evt) {
 		alpha = event.accelerationIncludingGravity.z*10
 	}
 
-	gamma = parseInt(gamma);
-	beta = parseInt(beta);
-
 	if (this._lastGamma != gamma || this._lastBeta != beta) {
         var rFontSize = window.getComputedStyle(document.querySelector('body')).fontSize.replace('px', ''),
-        	marginLeft = window.getComputedStyle(document.querySelector('#heart')).marginLeft.replace('px', ''),
-        	delta =  gamma/90 + 200;
+        	marginLeft = window.getComputedStyle(document.querySelector('#heart')).marginLeft.replace('px', '');
 
-        document.getElementById('e-btn-download').text = delta;
-        console.log(rFontSize);
-        console.log(marginLeft);
-        console.log(delta);
-
-        //style.marginLeft = gamma/90 * 200 + 200 +"px";
-        document.querySelector('#heart').style.marginLeft = marginLeft + delta + 'px';
-
-        this._lastGamma = gamma;
-        this._lastBeta = beta;
+        if(gamma !== NaN){
+	        console.log(rFontSize);
+	        console.log(marginLeft);
+          	document.querySelector('#heart').style.marginLeft = marginLeft + gamma/90 + 200 + 'px';
+ 			this._lastGamma = gamma;
+        	this._lastBeta = beta;
+        }
+      
     }
 
 };
