@@ -1,6 +1,6 @@
 var heart = document.querySelector('#heart'),
 	marginLeft = window.getComputedStyle(heart).marginLeft.replace('px', '');
-	console.log(marginLeft);
+	alert(marginLeft);
 
 function Orientation(selector) {}
 
@@ -40,7 +40,6 @@ Orientation.prototype.orientationListener = function(evt) {
  			this._lastGamma = gamma;
         	this._lastBeta = beta;
         }
-      
     }
 
 };
