@@ -135,11 +135,9 @@ html,body{font-size:13.33px;}
 	background-size: 5.21rem auto;
 	position: relative;
 	top: 10px;
-	-webkit-transition:top .5s ease-in;
-	transition:top .5s ease-in;
-}
-.express.active .logo-img{
-	top: 0;
+	-webkit-transition:all 1s ease-in;
+	-webkit-transform:translate(0, 0);
+	overflow: hidden;
 }
 .express .e-btn-download{
 	display: block;
