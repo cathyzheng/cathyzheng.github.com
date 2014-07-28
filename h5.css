@@ -118,7 +118,7 @@ html,body{font-size:13.33px;}
 	-webkit-transform:translate(-50%, -54%);
 	transform: translate(-50%, -54%);
 	-webkit-transform: translatez(0); 
-	transform:: translatez(0); 
+	transform: translatez(0); 
 	width: 100%;
 }
 .express .e-txt{
@@ -137,9 +137,11 @@ html,body{font-size:13.33px;}
 	background-size: 5.21rem auto;
 	position: relative;
 	-webkit-transition:all 1s ease-in 1s;
+	transition:all 1s ease-in 1s;
 	-webkit-transform:translate(0, -14px);
+	transform:translate(0, -14px);
 	-webkit-transform: translatez(0); 
-	transform:: translatez(0); 
+	transform: translatez(0); 
 }
 .express .e-btn-download{
 	display: block;
