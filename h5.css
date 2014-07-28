@@ -134,10 +134,11 @@ html,body{font-size:13.33px;}
 	background: url('/images/jiji.png');
 	background-size: 5.21rem auto;
 	position: relative;
-	-webkit-transition:all 1s ease-in 1s;
-	transition:all 1s ease-in 1s;
+	
 }
 .express.active .logo-img{
+	-webkit-transition:all 1s ease-in 1s;
+	transition:all 1s ease-in 1s;
 	-webkit-transform:translate(0, -16px);
 	transform:translate(0, -16px);
 }
