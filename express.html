@@ -37,18 +37,14 @@
 			<div class="logo-txt"></div>
 		</div>
 	</div>
-	<div class="heart"></div>
+	<div class="heart" id="heart"></div>
 </section>
 <script type="text/javascript">
 	(function(){
-		/*var express = document.getElementById('express'),
-			expressClass = express.className;
-		express.className = expressClass + ' active';*/
-
-		setTimeout(function(){
+		/*setTimeout(function(){
 			var logoImg = document.getElementById('logo-img');
 			logoImg.style.webkitTransform = 'translate(0, -16px) translateZ(0px)';
-		}, 500) 
+		}, 500) */
 
 		var eDownload = document.getElementById('e-btn-download'),
 			ua = navigator.userAgent,
@@ -72,13 +68,13 @@
 		});
 	})();
 </script>
-<!-- <script type="text/javascript" src="http://www.jiji.ly/static/js/devicemotion.js"></script>
+<script type="text/javascript" src="devicemotion.js"></script>
 
 <div style="display:none;">
 	<script type="text/javascript">
 	var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 	document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Faa23f2547210a644342486c0b584743a' type='text/javascript'%3E%3C/script%3E"));
 	</script>
-</div> -->
+</div>
 </body>
 </html>
