@@ -1,6 +1,5 @@
 var heart = document.querySelector('#heart'),
 	marginLeft = window.getComputedStyle(heart).marginLeft.replace('px', '');
-	alert(marginLeft);
 
 function Orientation(selector) {}
 
@@ -34,13 +33,9 @@ Orientation.prototype.orientationListener = function(evt) {
 	}
 
 	if (this._lastGamma != gamma || this._lastBeta != beta) {
-		alert(gamma);
-        if(gamma !== NaN){
-          	document.querySelector('#heart').style.marginLeft = marginLeft + gamma/90 + 200 + 'px';
-          	document.querySelector('#e-btn-download').text =  marginLeft + gamma/90 + 200 ;
- 			this._lastGamma = gamma;
-        	this._lastBeta = beta;
-        }
+      	document.querySelector('#heart').style.marginLeft = marginLeft + gamma/90 + 200 + 'px';
+		this._lastGamma = gamma;
+    	this._lastBeta = beta;
     }
 
 };
