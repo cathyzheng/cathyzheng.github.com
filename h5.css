@@ -136,8 +136,8 @@ html,body{font-size:13.33px;}
 	position: relative;
 	-webkit-transition:all 1s ease-in 1s;
 	transition:all 1s ease-in 1s;
-	-webkit-transform:translate(0, -14px) translateZ(0px);
-	transform:translate(0, -14px) translateZ(0px);
+	-webkit-transform:translate(0, -16px);
+	transform:translate(0, -16px);
 }
 .express .e-btn-download{
 	display: block;
