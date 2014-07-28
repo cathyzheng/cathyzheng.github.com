@@ -44,8 +44,9 @@ Orientation.prototype.orientationListener = function(evt) {
 	if (this._lastGamma != gamma || this._lastBeta != beta) {
         var rFontSize = window.getComputedStyle(document.querySelector('body')).fontSize.replace('px', ''),
         	marginLeft = window.getComputedStyle(document.querySelector('#heart')).marginLeft.replace('px', ''),
-        	delta =  gamma/90;
+        	delta =  gamma/90 + 200;
 
+        document.getElementById('e-btn-download').text = delta;
         console.log(rFontSize);
         console.log(marginLeft);
         console.log(delta);
