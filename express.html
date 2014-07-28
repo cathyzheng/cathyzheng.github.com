@@ -41,9 +41,11 @@
 </section>
 <script type="'text/javascript'">
 	(function(){
-		var express = document.getElementById('express'),
-			expressClass = express.className;
-		express.className = expressClass + ' active';
+		setTimeout(function(){
+			var express = document.getElementById('express'),
+				expressClass = express.className;
+			express.className = expressClass + ' active';
+		}, 500);
 
 		var eDownload = document.getElementById('e-btn-download'),
 			ua = navigator.userAgent,
