@@ -38,8 +38,6 @@ Orientation.prototype.orientationListener = function(evt) {
 	beta = parseInt(beta);
 
 	if (this._lastGamma != gamma || this._lastBeta != beta) {
-		//marginLeft = + window.getComputedStyle(heart).marginLeft.replace('px', '');
-		//console.log(marginLeft + gamma/90 + 10);
       	heart.style.left = gamma/90 * halfClientW + halfClientW +"px";
 
 		this._lastGamma = gamma;
