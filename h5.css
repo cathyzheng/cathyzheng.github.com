@@ -145,7 +145,7 @@ html,body{font-size:13.33px;}
 	display: block;
 	width: 6.23rem;
 	margin: -1.43rem auto 0;
-	border-radius: .3rem;
+	border-radius: 6px;
 	background-color: #4CBEC1;
 	line-height: 1.89rem;
 	height: 1.89rem;
