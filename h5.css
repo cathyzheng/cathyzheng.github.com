@@ -125,7 +125,7 @@ html,body{font-size:13.33px;}
 	color:#000;
 }
 .express .e-download{
-	margin-top:1rem;
+	margin-top:2rem;
 }
 .express .logo-img{
 	width: 5.21rem;
@@ -134,9 +134,8 @@ html,body{font-size:13.33px;}
 	background: url('/images/jiji.png');
 	background-size: 5.21rem auto;
 	position: relative;
-	top: 10px;
 	-webkit-transition:all 1s ease-in;
-	-webkit-transform:translate(0, 0);
+	-webkit-transform:translate(0, -18px)
 	overflow: hidden;
 }
 .express .e-btn-download{
