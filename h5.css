@@ -125,7 +125,7 @@ html,body{font-size:13.33px;}
 	color:#000;
 }
 .express .e-download{
-	margin-top:2rem;
+	margin-top:1.5rem;
 }
 .express .logo-img{
 	width: 5.21rem;
@@ -135,7 +135,7 @@ html,body{font-size:13.33px;}
 	background-size: 5.21rem auto;
 	position: relative;
 	-webkit-transition:all 1s ease-in;
-	-webkit-transform:translate(0, -18px)
+	-webkit-transform:translate(0, -14px)
 	overflow: hidden;
 }
 .express .e-btn-download{
